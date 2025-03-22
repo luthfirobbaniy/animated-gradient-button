@@ -1,0 +1,42 @@
+body {
+  padding: 0;
+  display: flex;
+  height: 100vh;
+}
+
+.animated-button {
+  border: none;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 8px 24px;
+  margin: auto;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #ff0000, #ff00ff, #ff0000);
+  background-size: 200%;
+  animation-name: change-color;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.animated-button:hover {
+  animation-name: change-color;
+  animation-play-state: running;
+}
+
+@keyframes change-color {
+ 0% {
+  background-position: 0%;
+ }
+
+ 100% {
+  background-position: 200%;
+ }
+}
